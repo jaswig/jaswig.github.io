@@ -4,7 +4,7 @@
 
   <body>
     {% include ga.html %}
-    
+
     <div id="vue-modal">
       <div class="video-modal" v-if="modal" v-cloak>
         <div class="video-modal-background" v-on:click="closeModal"></div>
@@ -27,9 +27,16 @@
       <div class="hero container">
         <h1 class="headline">Finally a beautiful standing desk.</h1>
         <div class="play">
-          <a href="#" class="play-video" data-video="https://www.youtube.com/embed/h4Td1ri5CRI?rel=0&amp;autoplay=1&amp;showinfo=0"><img src="{{ site.baseurl }}/images/play.svg" alt=""></a>
+          <a href="#" class="play-video" data-video="https://www.youtube.com/embed/_mysZEYpAeM?rel=0&amp;autoplay=1&amp;showinfo=0"><img src="{{ site.baseurl }}/images/play.svg" alt=""></a>
         </div>
         <a href="/store/" class="cta">Order now</a>
+        <div class="coupon desktop">
+          <h4>Sign up and get a $50 coupon in your inbox </h4>
+          <form class="email_coupon">
+            <input name="email" class="txtemail" placeholder="Email" type="text" />
+            <input class="sign_up" value="Sign Up" type="button">
+          </form>
+        </div>
       </div>
     </div>
 
@@ -41,12 +48,33 @@
           </div>
           <div class="col-xs-12">
             <a href="/store/" class="cta btn ">Order now</a>
+            <div class="coupon mobile">
+              <p>Sign up and get a $50 coupon in your inbox </p>
+              <form class="email_coupon">
+                <input name="email" class="txtemail" placeholder="Email" type="text" />
+                <input class="sign_up" value="Sign Up" type="button">
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
     {{ content }}
     {% include footer.html %}
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel"></h4>
+          </div>
+          <div class="modal-body">
+            <p class="content_msg"></p>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 
 </html>
