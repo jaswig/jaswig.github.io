@@ -1,7 +1,6 @@
 .mobile-content {
   padding: 40px 20px;
   text-align: center;
-  padding-bottom: 20px;
 }
 
 .mobile-content .headline {
@@ -10,7 +9,7 @@
 }
 
 .mobile-content .btn {
-  //margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 @media (min-width: $screen-sm-min) {
