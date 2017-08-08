@@ -149,6 +149,10 @@ a.header-card.fully {
   font-family: "Brandon Grotesque";
 }
 
+a.header-card.fully-mobile {
+  font-size: 20px!important;
+}
+
 @media (min-width: $screen-md-min) {
   header {
     padding-top: 30px;
